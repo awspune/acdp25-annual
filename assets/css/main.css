@@ -12,7 +12,41 @@ Location:
 a, a:hover {
   text-decoration: none;
 }
-
+/* Organizer & Lead Volunteer photo transition */
+.team-member img {
+  transition: transform 0.4s cubic-bezier(.4,2,.6,1), box-shadow 0.4s, filter 0.4s;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+}
+.team-member img:hover {
+  transform: scale(1.07) rotate(-2deg);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  filter: brightness(1.08);
+}
+.organizers-section,
+.organizers-section h2,
+.organizers-section h3,
+.organizers-section h4,
+.organizers-section p,
+.organizers-section .team-member,
+.footer1-section-area,
+.footer1-section-area h4,
+.footer1-section-area p,
+.footer1-section-area a,
+.footer1-section-area ul,
+.footer1-section-area li,
+.themes-section,
+.themes-section h1,
+.themes-section h2,
+.themes-section h3,
+.themes-section h4,
+.themes-section h5,
+.themes-section h6,
+.themes-section p,
+.themes-section a,
+.themes-section li
+{
+      font-family: 'Space Grotesk', Arial, Helvetica, sans-serif !important;
+}
 ul {
   padding: 0;
   margin: 0;
