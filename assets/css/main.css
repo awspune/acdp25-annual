@@ -1822,7 +1822,7 @@ Location:
 }
 .pricing-plan-section-area .pricing-boxarea {
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(51, 2, 228, 0.06);
   position: relative;
   z-index: 1;
   text-align: center;
@@ -1915,7 +1915,7 @@ Location:
 }
 .pricing-lan-section-area .pricing-boxarea {
   border-radius: 8px;
-  background: #F2F4FF;
+  background: #00008B; 
   position: relative;
   z-index: 1;
   border-radius: 8px;
@@ -1933,13 +1933,14 @@ Location:
   padding: 8px 10px;
   display: inline-block;
   background-image: url(../img/bg/others-bg3.png);
+
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 4px;
 }
 .pricing-lan-section-area .pricing-boxarea h2 {
-  color: var(--ztc-text-text-2);
+  color: var(--ztc-text-text-1);
   font-family: var(--ztc-family-font1);
   font-size: var(--ztc-font-size-font-s44);
   font-style: normal;
@@ -1948,7 +1949,7 @@ Location:
   text-transform: capitalize;
 }
 .pricing-lan-section-area .pricing-boxarea h2 span {
-  color: var(--ztc-text-text-3);
+  color: var(--ztc-text-text-1);
   font-family: var(--ztc-family-font1);
   font-size: var(--ztc-font-size-font-s18);
   font-style: normal;
@@ -1958,7 +1959,7 @@ Location:
   display: inline-block;
 }
 .pricing-lan-section-area .pricing-boxarea ul li {
-  color: var(--ztc-text-text-2);
+  color: var(--ztc-text-text-1);
   font-family: var(--ztc-family-font1);
   font-size: var(--ztc-font-size-font-s16);
   font-style: normal;
@@ -24241,5 +24242,22 @@ Location:
   display: inline-block;
   transition: all 0.4s;
 }
+
+/* Make countdown timer boxes more dark and text more readable */
+#event-countdown .countdown-box {
+  background: #00008B !important; /* much darker background */
+  border-radius: 10px;
+  padding: 18px 12px;
+  min-width: 80px;
+
+  box-shadow: 0 2px 8px rgba(251, 95, 252, 1);
+   z-index: 9999; 
+}
+
+#event-countdown .countdown-box span,
+#event-countdown .countdown-box div {
+  color: rgba(255, 192, 0, 1)!important; /* ensure text is readable on dark bg */
+}
+
 
 /*============= MEMORY CSS AREA ===============*//*# sourceMappingURL=main.css.map */
