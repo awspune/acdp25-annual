@@ -77,6 +77,91 @@ AOS.init({disable: 'mobile'});
 //========== NICE SELECT ============= //
 $('select').niceSelect();
 
+  //========== DESKTOP NAV ACTIVE UNDERLINE (SCROLL + CLICK) ============= //
+  try {
+    var $navLinks = $(".header-area .main-menu ul li > a");
+    if ($navLinks.length) {
+      function setActiveLinkByHref(href) {
+        $navLinks.removeClass('active');
+        $navLinks.filter('[href="' + href + '"]').addClass('active');
+      }
+
+      // Init from hash or top of page
+      if (window.location.hash && $(window.location.hash).length) {
+        setActiveLinkByHref('#' + window.location.hash.replace('#', ''));
+      } else if ($(window).scrollTop() < 150) {
+        // Home state when near top
+        var homeHref = $navLinks.first().attr('href') || 'index.html';
+        setActiveLinkByHref(homeHref);
+      }
+
+      // Click handling: apply active immediately
+      $navLinks.on('click', function() {
+        var href = $(this).attr('href') || '';
+        if (href.startsWith('#')) {
+          setActiveLinkByHref(href);
+        } else if (href.indexOf('index.html') !== -1) {
+          setActiveLinkByHref(href);
+        }
+      });
+
+      // Observe sections to update active on scroll
+      var targets = [];
+      $navLinks.each(function() {
+        var href = $(this).attr('href') || '';
+        if (href.startsWith('#')) {
+          var id = href.substring(1);
+          var el = document.getElementById(id);
+          if (el) targets.push(el);
+        }
+      });
+
+      if (targets.length && 'IntersectionObserver' in window) {
+        var activeFromObserver = false;
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting && entry.intersectionRatio > 0.55) {
+              activeFromObserver = true;
+              setActiveLinkByHref('#' + entry.target.id);
+            }
+          });
+        }, { threshold: [0.55], rootMargin: '0px 0px -25% 0px' });
+
+        targets.forEach(function(t) { observer.observe(t); });
+
+        // Fallback to Home near top
+        $(window).on('scroll', function() {
+          if ($(this).scrollTop() < 150 && !window.location.hash) {
+            var homeHref = $navLinks.first().attr('href') || 'index.html';
+            setActiveLinkByHref(homeHref);
+          }
+        });
+      } else {
+        // Simple fallback based on scroll position if IO not available
+        $(window).on('scroll', function() {
+          var scrollPos = $(this).scrollTop();
+          var currentHref = null;
+          $navLinks.each(function() {
+            var href = $(this).attr('href') || '';
+            if (!href.startsWith('#')) return;
+            var $section = $(href);
+            if ($section.length) {
+              var top = $section.offset().top - 200;
+              if (scrollPos >= top) currentHref = href;
+            }
+          });
+          if (currentHref) {
+            setActiveLinkByHref(currentHref);
+          } else if (scrollPos < 150) {
+            var homeHref = $navLinks.first().attr('href') || 'index.html';
+            setActiveLinkByHref(homeHref);
+          }
+        });
+      }
+    }
+  } catch (e) { /* no-op */ }
+  //========== DESKTOP NAV ACTIVE UNDERLINE (SCROLL + CLICK) ============= //
+
 });
 //========== COUNTER UP============= //
 // const ucounter = $('.counter');
@@ -798,5 +883,25 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
+  //========== SPEAKER LINKEDIN FUNCTIONALITY ============= //
+  // Add click event listeners to all LinkedIn overlays
+  document.addEventListener('DOMContentLoaded', function() {
+    const linkedinOverlays = document.querySelectorAll('.linkedin-overlay');
+    
+    linkedinOverlays.forEach((overlay, index) => {
+      overlay.addEventListener('click', function() {
+        // Get the corresponding LinkedIn link
+        const speakerCard = this.closest('.speaker-card');
+        const linkedinLink = speakerCard.querySelector('.linkedin-link');
+        
+        if (linkedinLink && linkedinLink.href && linkedinLink.href !== '#') {
+          window.open(linkedinLink.href, '_blank');
+        } else {
+          // Fallback: You can customize this message or action
+          console.log('LinkedIn profile not available for this speaker');
+        }
+      });
+    });
+  });
 
   
