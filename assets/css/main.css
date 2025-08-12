@@ -22,6 +22,75 @@ a, a:hover {
   box-shadow: 0 8px 32px rgba(0,0,0,0.18);
   filter: brightness(1.08);
 }
+
+/* Speaker Section Styles */
+.speakers-section {
+  background: #fff;
+}
+
+.speaker-card {
+  transition: transform 0.3s ease;
+}
+
+.speaker-card:hover {
+  transform: translateY(-5px);
+}
+
+.speaker-image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.speaker-image-container img {
+  transition: all 0.3s ease;
+}
+
+.speaker-image-container:hover img {
+  filter: brightness(0.7);
+}
+
+.linkedin-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background: rgba(0, 123, 255, 0.9);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.speaker-image-container:hover .linkedin-overlay {
+  opacity: 1;
+}
+
+.linkedin-overlay:hover {
+  background: rgba(0, 123, 255, 1);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.speakers-grid,
+.co-speakers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  justify-items: center;
+}
+
+@media (max-width: 768px) {
+  .speakers-grid,
+  .co-speakers-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+  }
+}
 .organizers-section,
 .organizers-section h2,
 .organizers-section h3,
@@ -24260,4 +24329,40 @@ Location:
 }
 
 
-/*============= MEMORY CSS AREA ===============*//*# sourceMappingURL=main.css.map */
+/*============= MEMORY CSS AREA ===============*/
+
+/* Header hover overrides for homepage4 main menu (works with current markup without .header-elements) */
+html { scroll-behavior: smooth; }
+.header-area.homepage4 .main-menu ul li > a {
+  transition: color 0.2s ease;
+  font-size: 18px;
+  position: relative;
+}
+.header-area.homepage4 .main-menu ul li > a::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  height: 3px;
+  bottom: -10px;
+  background: var(--ztc-text-text-13);
+  border-radius: 3px;
+  transform: scaleX(0);
+  transform-origin: center;
+  opacity: 0;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+.header-area.homepage4 .main-menu ul li:hover > a::after,
+.header-area.homepage4 .main-menu ul li > a.active::after {
+  transform: scaleX(1);
+  opacity: 1;
+}
+.header-area.homepage4 .main-menu ul li:hover > a {
+  color: var(--ztc-text-text-13) !important; /* override inline color */
+}
+.header-area.homepage4 .main-menu ul li > a:focus-visible {
+  outline: none;
+  color: var(--ztc-text-text-13) !important;
+}
+
+/*# sourceMappingURL=main.css.map */
