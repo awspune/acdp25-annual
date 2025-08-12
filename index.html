@@ -50,6 +50,34 @@
             align-items: center;
             text-align: center;
         }
+        /* Footer organization */
+        .footer1-section-area .footer-column-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #fff;
+        }
+        .footer1-section-area a { color: #ccc; }
+        .footer1-section-area a:hover { color: #ffb84d; }
+        .footer1-section-area ul { list-style: none; padding: 0; margin: 0; }
+        .footer1-section-area .social-links { display: flex; gap: 12px; margin-top: 16px; }
+        .footer1-section-area .social-links a {
+            display: inline-flex;
+            width: 36px;
+            height: 36px;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 50%;
+            transition: all 0.2s ease;
+            color: #ff9900;
+        }
+        .footer1-section-area .social-links a:hover {
+            background: rgba(255,255,255,0.08);
+            transform: translateY(-2px);
+        }
+        .footer1-section-area .footer-logo { max-width: 160px; height: auto; margin-bottom: 20px; }
+        .footer1-section-area .footer-bottom { margin-top: 32px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.12); }
         </style>
 	</head>
 	<body class="homepage4-body">
@@ -1459,41 +1487,33 @@
 <div style="background: #d68204; height: 5px; margin: 0;"></div>
 
 			<!-- Footer Section -->
-<div class="footer1-section-area" style="background-color: #232f3e; color: #fff; padding: 40px 0;">
+<div class="footer1-section-area" style="background-color: #232f3e; color: #fff; padding: 48px 0;">
     <div class="container">
         <div class="row">
             <!-- Footer Column 1 -->
             <div class="col-lg-4 col-md-6">
-                <div class="footer-logo-area" style="margin-bottom: 20px;">
-                    <img src="assets/img/awsugpune.png" alt="AWS User Group Pune" style="max-width: 150px; height: auto; margin-bottom: 20px;" />
-                    <p style="font-size: 0.9rem; line-height: 1.6;">
-                        AWS Community Day Pune is a community-driven event organized by AWS User Group Pune, bringing together cloud enthusiasts, developers, and industry experts.
+                <div class="footer-logo-area" style="margin-bottom: 16px;">
+                    <img class="footer-logo" src="assets/img/awsugpune.png" alt="AWS User Group Pune" />
+                    <p style="font-size: 0.95rem; line-height: 1.8; color: #cfd8e3;">
+                        AWS Community Day Pune is a community-driven event by AWS User Group Pune, bringing together cloud enthusiasts, developers, and industry experts.
                     </p>
                 </div>
-                <ul style="list-style: none; padding: 0; display: flex; gap: 15px; margin-top: 20px;">
-                    <li>
-                        <a href="https://konfhub.com/acdpune25-aiml" target="_blank" title="Get Tickets" style="color: #ff9900; font-size: 1.5rem;"><i class="fa-solid fa-ticket"></i></a>
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com/awspune/" target="_blank" style="color: #ff9900; font-size: 1.5rem;"><i class="fa-brands fa-instagram"></i></a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/company/aws-user-group-pune/" target="_blank" style="color: #ff9900; font-size: 1.5rem;"><i class="fa-brands fa-linkedin-in"></i></a>
-                    </li>
-                    <li>
-                        <a href="mailto:team@awsugpune.org" style="color: #ff9900; font-size: 1.5rem;"><i class="fa-regular fa-envelope"></i></a>
-                    </li>
-                </ul>
+                <div class="social-links" aria-label="Footer social links">
+                    <a href="https://konfhub.com/acdpune2025" target="_blank" title="Get Tickets" aria-label="Get Tickets"><i class="fa-solid fa-ticket"></i></a>
+                    <a href="https://www.instagram.com/awspune/" target="_blank" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/aws-user-group-pune/" target="_blank" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="mailto:team@awsugpune.org" title="Email" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+                </div>
             </div>
 
             <!-- Footer Column 2 -->
             <div class="col-lg-4 col-md-6">
                 <div class="link-content">
-                    <h4 style="font-size: 1.2rem; margin-bottom: 20px; color: #fff;">Quick Links</h4>
-                    <ul style="list-style: none; padding: 0; line-height: 2;">
-                        <li><a href="#event-overview" style="color: #ccc; text-decoration: none;">About Event</a></li>
-                        <li><a href="#event-overview" style="color: #ccc; text-decoration: none;">Schedule</a></li>
-                        <li><a href="mailto:team@awsugpune.org" style="color: #ccc; text-decoration: none;">Contact Us</a></li>
+                    <h4 class="footer-column-title">Quick Links</h4>
+                    <ul style="line-height: 2;">
+                        <li><a href="#event-overview">About Event</a></li>
+                        <li><a href="#event-overview">Schedule</a></li>
+                        <li><a href="mailto:team@awsugpune.org">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
@@ -1501,19 +1521,19 @@
             <!-- Footer Column 3 -->
             <div class="col-lg-4 col-md-6">
                 <div class="link-content">
-                    <h4 style="font-size: 1.2rem; margin-bottom: 20px; color: #fff;">Event Details</h4>
-                    <ul style="list-style: none; padding: 0; line-height: 2;">
-                        <li><a href="#" style="color: #ccc; text-decoration: none;"><i class="fa-regular fa-calendar"></i> August 23rd, 2025</a></li>
-                        <li><a href="#" style="color: #ccc; text-decoration: none;"><i class="fa-regular fa-location-dot"></i> Pune, Maharashtra, India</a></li>
-                        <li><a href="mailto:team@awsugpune.org" style="color: #ccc; text-decoration: none;"><i class="fa-regular fa-envelope"></i> team@awsugpune.org</a></li>
+                    <h4 class="footer-column-title">Event Details</h4>
+                    <ul style="line-height: 2;">
+                        <li><a href="#"><i class="fa-regular fa-calendar"></i> August 23rd, 2025</a></li>
+                        <li><a href="#"><i class="fa-regular fa-location-dot"></i> Pune, Maharashtra, India</a></li>
+                        <li><a href="mailto:team@awsugpune.org"><i class="fa-regular fa-envelope"></i> team@awsugpune.org</a></li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <div class="row" style="margin-top: 40px;">
+        <div class="row footer-bottom">
             <div class="col-lg-12 text-center">
-                <p style="font-size: 0.9rem; color: #ccc;">&copy; 2025 AWS Community Day Pune. All Rights Reserved.</p>
+                <p style="font-size: 0.9rem; color: #ccc; margin: 0;">&copy; 2025 AWS Community Day Pune. All Rights Reserved.</p>
             </div>
         </div>
     </div>
