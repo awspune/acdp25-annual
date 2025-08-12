@@ -24,9 +24,33 @@
 		<!--=====  JS SCRIPT LINK =======-->
 		<script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
 		<!-- Place this style block in your <head> section, after your CSS links -->
-		<style>
-		/* Use the same font as the navbar for all text */
-		</style>
+        <style>
+        /* Use the same font as the navbar for all text */
+        /* Sponsors hover/animation helpers */
+        .sponsors-section .sponsor-box {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .sponsors-section .sponsor-box:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12) !important;
+        }
+        .sponsors-section .sponsor-box img {
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+        .sponsors-section .sponsor-box img:hover {
+            transform: scale(1.03);
+            filter: brightness(1.02);
+        }
+        /* Ensure consistent box sizing across tiers */
+        .sponsors-section .sponsor-box {
+            min-height: 320px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        </style>
 	</head>
 	<body class="homepage4-body">
 		<!-- Popup Section -->
@@ -627,6 +651,7 @@
         </div>
     </div>
 </section>
+
 <!-- Venue Section: Place this after the Past Events or wherever appropriate -->
 <section class="venue-section" id="venue" style="background: #f8f9fa; padding: 80px 0;">
     <div class="container">
@@ -665,8 +690,6 @@
                     </iframe>
                 </div>
             </div>
-
-        
     </div>
 </section>
 
@@ -999,13 +1022,13 @@
 <section class="sponsors-section" style="background: #f8f9fa; padding: 80px 0;">
     <div class="container">
         <div class="section-header heading6 text-center" style="margin-bottom: 40px;">
-            <h5 data-aos="fade-left" data-aos-duration="800">Our Sponsors</h5>
+            <h5 data-aos="fade-up" data-aos-duration="700">Our Sponsors</h5>
             <div class="space18"></div>
-            <h2 class="text-anime-style-3">Thank You to Our Sponsors</h2>
+            <h2 class="text-anime-style-3" data-aos="zoom-in" data-aos-duration="800">Thank You to Our Sponsors</h2>
         </div>
         <!-- ClickHouse: Platinum Sponsor (full width, first row) -->
         <div class="row justify-content-center mb-4">
-            <div class="col-12 col-md-8 text-center d-flex align-items-stretch justify-content-center mx-auto">
+            <div class="col-12 col-md-8 text-center d-flex align-items-stretch justify-content-center mx-auto" data-aos="fade-up" data-aos-duration="800">
                 <div class="sponsor-box" style="border: 2px solid #e5e4e2; border-radius: 12px; padding: 32px 16px; background: #f7f7fa; box-shadow: 0 2px 12px rgba(229,228,226,0.10); margin-bottom: 24px; width: 100%;">
                     <div style="margin-bottom: 18px;">
                         <span style="background: linear-gradient(90deg,#e5e4e2,#b3b3b3); color: #232f3e; font-weight: 700; padding: 6px 18px; border-radius: 20px; font-size: 1.1rem;">Platinum Sponsor</span>
@@ -1017,21 +1040,29 @@
                 </div>
             </div>
         </div>
-        <!-- Elastic: Gold Sponsor (full width, second row) -->
+        <!-- Gold Sponsors (same box: MX priority + Elastic) -->
         <div class="row justify-content-center">
-            <div class="col-12 col-md-8 text-center d-flex align-items-stretch justify-content-center mx-auto">
+            <div class="col-12 col-md-8 text-center d-flex align-items-stretch justify-content-center mx-auto" data-aos="fade-up" data-aos-duration="900" data-aos-delay="100">
                 <div class="sponsor-box" style="border: 2px solid #FFD700; border-radius: 12px; padding: 32px 16px; background: #fffbea; box-shadow: 0 2px 12px rgba(255,215,0,0.07); margin-bottom: 24px; width: 100%;">
-                    <div style="margin-bottom: 18px;">
-                        <span style="background: #FFD700; color: #232f3e; font-weight: 700; padding: 6px 18px; border-radius: 20px; font-size: 1.1rem;">Gold Sponsor</span>
+                    <div style="margin-bottom: 24px;">
+                        <span style="background: #FFD700; color: #232f3e; font-weight: 700; padding: 6px 18px; border-radius: 20px; font-size: 1.1rem;">Gold Sponsors</span>
                     </div>
-                    <img src="assets/img/sponsors/elastic-logo.png" alt="Gold Sponsor Elastic" style="max-width: 220px; width: 100%; height: auto; margin-bottom: 12px;" />
-                    <div style="margin-top: 10px;">
-                        <a href="https://elastic.co" target="_blank" style="color: #ff9900; font-weight: 600; text-decoration: none;">Visit Elastic</a>
+                    <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 36px; flex-wrap: wrap;">
+                        <div style="display: flex; flex-direction: column; align-items: center;" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="150">
+                            <img src="assets/img/sponsors/elastic-logo.png" alt="Gold Sponsor Elastic" style="max-width: 220px; width: 100%; height: auto; margin-bottom: 6px;" />
+                            <div style="margin-top: 6px;">
+                                <a href="https://elastic.co" target="_blank" style="color: #ff9900; font-weight: 600; text-decoration: none;">Visit Elastic</a>
+                            </div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center;" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="250">
+                            <img src="assets/img/sponsors/mx-black.png" alt="Gold Sponsor MX" style="max-width: 220px; width: 100%; height: auto; margin-bottom: 6px;" />
+                            <div style="margin-top: 4px; color: #555; font-weight: 700;">Digital Partner</div>
+                        </div>
                     </div>
                 </div>
             </div>
-		<!--===== FOOTER AREA STARTS =======-->
-		<!-- Divider between Feedback Section and Footer -->
+        </div>
+        <!--===== FOOTER AREA STARTS =======-->
 
 			<!-- Organizing Team Section -->
 <section class="organizers-section" style="padding: 80px 0; background-color: #fff;">
