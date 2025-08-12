@@ -24,9 +24,61 @@
 		<!--=====  JS SCRIPT LINK =======-->
 		<script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
 		<!-- Place this style block in your <head> section, after your CSS links -->
-		<style>
-		/* Use the same font as the navbar for all text */
-		</style>
+        <style>
+        /* Use the same font as the navbar for all text */
+        /* Sponsors hover/animation helpers */
+        .sponsors-section .sponsor-box {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .sponsors-section .sponsor-box:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12) !important;
+        }
+        .sponsors-section .sponsor-box img {
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+        .sponsors-section .sponsor-box img:hover {
+            transform: scale(1.03);
+            filter: brightness(1.02);
+        }
+        /* Ensure consistent box sizing across tiers */
+        .sponsors-section .sponsor-box {
+            min-height: 320px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        /* Footer organization */
+        .footer1-section-area .footer-column-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #fff;
+        }
+        .footer1-section-area a { color: #ccc; }
+        .footer1-section-area a:hover { color: #ffb84d; }
+        .footer1-section-area ul { list-style: none; padding: 0; margin: 0; }
+        .footer1-section-area .social-links { display: flex; gap: 12px; margin-top: 16px; }
+        .footer1-section-area .social-links a {
+            display: inline-flex;
+            width: 36px;
+            height: 36px;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 50%;
+            transition: all 0.2s ease;
+            color: #ff9900;
+        }
+        .footer1-section-area .social-links a:hover {
+            background: rgba(255,255,255,0.08);
+            transform: translateY(-2px);
+        }
+        .footer1-section-area .footer-logo { max-width: 160px; height: auto; margin-bottom: 20px; }
+        .footer1-section-area .footer-bottom { margin-top: 32px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.12); }
+        </style>
 	</head>
 	<body class="homepage4-body">
 		<!-- Popup Section -->
@@ -88,7 +140,7 @@
                         <ul style="display: flex; justify-content: center; gap: 32px; margin: 0; padding: 0; list-style: none;">
                             <li><a href="index.html" style="font-weight: 600; color: #232f3e;">Home</a></li>
                             <li><a href="#event-overview" style="font-weight: 600; color: #232f3e;">About Event</a></li>
-                            <li><a href="#call-for-speakers" style="font-weight: 600; color: #232f3e;">Speakers</a></li>
+                            <li><a href="#speakers" style="font-weight: 600; color: #232f3e;">Speakers</a></li>
                             <li><a href="#" style="font-weight: 600; color: #232f3e;">Schedule</a></li>
                             <li><a href="#venue" style="font-weight: 600; color: #232f3e;">Venue</a></li>
                         </ul>
@@ -345,7 +397,7 @@
 							<div class="row align-items-center">
 								<div class="col-lg-4">
 									<div class="heading-area">
-										<h4 class="text-anime-style-3">Yearly Business Conferences “25”</h4>
+										<h4 class="text-anime-style-3">Yearly Business Conferences "25"</h4>
 										<div class="space20 d-lg-none d-block"></div>
 									</div>
 								</div>
@@ -463,8 +515,8 @@
 							<ul>
 								<li><img src="assets/img/icons/check2.svg" alt="" />Extremely limited but packed with maximum value</li>
 								<li><img src="assets/img/icons/check2.svg" alt="" />Full access to the complete event experience apart from workshop</li>
-								<li><img src="assets/img/icons/check2.svg" alt="" />Best price you’ll ever get — unbeatable deal!</li>
-								<li><img src="assets/img/icons/check2.svg" alt="" /> Don’t miss out — reserve your seat now and stay ahead of the crowd!</li>
+								<li><img src="assets/img/icons/check2.svg" alt="" />Best price you'll ever get — unbeatable deal!</li>
+								<li><img src="assets/img/icons/check2.svg" alt="" /> Don't miss out — reserve your seat now and stay ahead of the crowd!</li>
 							</ul>
 							<div class="space28"></div>
 							<div class="btn-area1">
@@ -627,6 +679,7 @@
         </div>
     </div>
 </section>
+
 <!-- Venue Section: Place this after the Past Events or wherever appropriate -->
 <section class="venue-section" id="venue" style="background: #f8f9fa; padding: 80px 0;">
     <div class="container">
@@ -665,10 +718,303 @@
                     </iframe>
                 </div>
             </div>
-
-        
     </div>
 </section>
+
+<!-- Speakers Section -->
+<section class="speakers-section" id="speakers" style="background: #fff; padding: 80px 0;">
+    <div class="container">
+        <div class="section-header heading6 text-center" style="margin-bottom: 48px;">
+            <h5 data-aos="fade-left" data-aos-duration="800">Speakers</h5>
+            <div class="space18"></div>
+            <h2 class="text-anime-style-3">Meet Our Speakers</h2>
+        </div>
+        
+        <div class="keynote-section" style="margin-bottom: 40px; text-align: center;">
+        <h2 class="text-anime-style-3 text-center" style="margin-bottom: 20px;">Keynote Speakers</h2>
+        <div class="speaker-card" style="text-align: center; position: relative; display: inline-block;">
+            <div class="speaker-image-container" style="position: relative; display: inline-block; margin-bottom: 20px;">
+                <img src="assets/img/speakers/TBD.jpg" alt="TBD" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; object-position: center top; box-shadow: 0 4px 20px rgba(0,0,0,0.15); transition: all 0.3s ease; margin-bottom: 15px;">
+                <div class="linkedin-overlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0; transition: opacity 0.3s ease; background: rgba(0,123,255,0.9); border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                    <i class="fab fa-linkedin" style="color: white; font-size: 24px;"></i>
+                </div>
+            </div>
+            <h4 style="margin-bottom: 8px; color: #232f3e; font-size: 1.3rem;">TBD</h4>
+            <p style="color: #666; font-size: 1rem; margin-bottom: 0;">TBD</p>
+            <p style="color: #888; font-size: 0.9rem; margin-bottom: 0;">TBD</p>
+            <a href="#" class="linkedin-link" target="_blank" style="display: none;">LinkedIn Profile</a>
+        </div>
+    </div>
+
+    <div class="co-speakers-content" style="margin-top: 40px;">
+        <h2 class="text-anime-style-3 text-center" style="margin-bottom: 40px;">Sponsor Speakers</h2>
+        <div class="co-speakers-grid" style="display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; max-width: 1000px; margin: 0 auto;">
+            
+            <div class="speaker-card" style="text-align: center; position: relative;">
+                <div class="speaker-image-container" style="position: relative; display: inline-block; margin-bottom: 20px;">
+                    <img src="assets/img/speakers/Rakesh Puttaswamy.jpeg" alt="Rakesh Puttaswamy" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; object-position: center 20%; margin-bottom: 15px;">
+                    <div class="linkedin-overlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0; transition: opacity 0.3s ease; background: rgba(0,123,255,0.9); border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                        <i class="fab fa-linkedin" style="color: white; font-size: 24px;"></i>
+                    </div>
+                </div>
+                <h4 style="margin-bottom: 8px; color: #232f3e; font-size: 1.3rem;">Rakesh Puttaswamy</h4>
+                <p style="color: #666; font-size: 1rem; margin-bottom: 0;">Principal Solutions Architect</p>
+                <p style="color: #888; font-size: 0.9rem; margin-bottom: 0;">Clickhouse</p>
+                <a href="#" class="linkedin-link" target="_blank" style="display: none;">LinkedIn Profile</a>
+            </div>
+
+            <div class="speaker-card" style="text-align: center; position: relative;">
+                <div class="speaker-image-container" style="position: relative; display: inline-block; margin-bottom: 20px;">
+                    <img src="assets/img/speakers/Someshwaran M.jpg" alt="Someshwaran M" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; object-position: center 20%; margin-bottom: 15px;">
+                    <div class="linkedin-overlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0; transition: opacity 0.3s ease; background: rgba(0,123,255,0.9); border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                        <i class="fab fa-linkedin" style="color: white; font-size: 24px;"></i>
+                    </div>
+                </div>
+                <h4 style="margin-bottom: 8px; color: #232f3e; font-size: 1.3rem;">Someshwaran M</h4>
+                <p style="color: #666; font-size: 1rem; margin-bottom: 0;">Developer Advocate </p>
+                <p style="color: #888; font-size: 0.9rem; margin-bottom: 0;">Elastic</p>
+                <a href="#" class="linkedin-link" target="_blank" style="display: none;">LinkedIn Profile</a>
+            </div>    
+        </div>
+    </div>
+
+    <div class="keynote-section" style="margin-bottom: 20px; text-align: center;">
+        <div class="speaker-card" style="text-align: center; position: relative; display: inline-block;">
+            <div class="speaker-image-container" style="position: relative; display: inline-block; margin-bottom: 20px;">
+               <img src="assets/img/Dheeraj Choudhary.png" alt="Dheeraj Choudhary" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; object-position: center 20%; margin-bottom: 15px;">
+                <div class="linkedin-overlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0; transition: opacity 0.3s ease; background: rgba(0,123,255,0.9); border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                    <i class="fab fa-linkedin" style="color: white; font-size: 24px;"></i>
+                </div>
+            </div>
+            <h4 style="margin-bottom: 8px; color: #232f3e; font-size: 1.3rem;">Dheeraj Choudhary</h4>
+            <p style="color: #666; font-size: 1rem; margin-bottom: 0;">AWS Hero & AWS UG Pune Leader</p>
+            <p style="color: #888; font-size: 0.9rem; margin-bottom: 0;"></p>
+            <a href="#" class="linkedin-link" target="_blank" style="display: none;">LinkedIn Profile</a>
+        </div>
+    </div>
+
+
+        <div class="speakers-content" style="margin-bottom: 60px;">
+            <div class="speakers-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; justify-items: center;">
+            </div>
+        </div>
+
+        <!-- Speakers -->
+        <div class="co-speakers-content">
+            <div class="co-speakers-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; justify-items: center;">
+                <div class="speaker-card" style="text-align: center; position: relative;">
+                    <div class="speaker-image-container" style="position: relative; display: inline-block; margin-bottom: 20px;">
+                        <img src="assets/img/speakers/abhinav dubey.jpeg" alt="Abhinav Dubey" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; object-position: center top; box-shadow: 0 4px 20px rgba(0,0,0,0.15); transition: all 0.3s ease;">
+                        <div class="linkedin-overlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0; transition: opacity 0.3s ease; background: rgba(0,123,255,0.9); border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                            <i class="fab fa-linkedin" style="color: white; font-size: 24px;"></i>
+                        </div>
+                    </div>
+                    <h4 style="margin-bottom: 8px; color: #232f3e; font-size: 1.3rem;">Abhinav Dubey</h4>
+                    <p style="color: #666; font-size: 1rem; margin-bottom: 0;">Solutions Architect</p>
+                    <p style="color: #888; font-size: 0.9rem; margin-bottom: 0;">Devtron Inc</p>
+                    <a href="#" class="linkedin-link" target="_blank" style="display: none;">LinkedIn Profile</a>
+                </div>
+
+                <div class="speaker-card" style="text-align: center; position: relative;">
+                    <div class="speaker-image-container" style="position: relative; display: inline-block; margin-bottom: 20px;">
+                        <img src="assets/img/speakers/ashish kumar.jpg" alt="Ashish Kumar" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; object-position: center top; box-shadow: 0 4px 20px rgba(0,0,0,0.15); transition: all 0.3s ease;">
+                        <div class="linkedin-overlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0; transition: opacity 0.3s ease; background: rgba(0,123,255,0.9); border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                            <i class="fab fa-linkedin" style="color: white; font-size: 24px;"></i>
+                        </div>
+                    </div>
+                    <h4 style="margin-bottom: 8px; color: #232f3e; font-size: 1.3rem;">Ashish Kumar</h4>
+                    <p style="color: #666; font-size: 1rem; margin-bottom: 0;">Chief Technology Officer</p>
+                    <p style="color: #888; font-size: 0.9rem; margin-bottom: 0;">CloudZenia</p>
+                    <a href="#" class="linkedin-link" target="_blank" style="display: none;">LinkedIn Profile</a>
+                </div>
+
+                <div class="speaker-card" style="text-align: center; position: relative;">
+                    <div class="speaker-image-container" style="position: relative; display: inline-block; margin-bottom: 20px;">
+                        <img src="assets/img/speakers/sakshi nasha.jpg" alt="Sakshi Nasha" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; object-position: center top; box-shadow: 0 4px 20px rgba(0,0,0,0.15); transition: all 0.3s ease;">
+                        <div class="linkedin-overlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0; transition: opacity 0.3s ease; background: rgba(0,123,255,0.9); border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                            <i class="fab fa-linkedin" style="color: white; font-size: 24px;"></i>
+                        </div>
+                    </div>
+                    <h4 style="margin-bottom: 8px; color: #232f3e; font-size: 1.3rem;">Ashwin Raiyani </h4>
+                    <p style="color: #666; font-size: 1rem; margin-bottom: 0;">AWS Certified Educator</p>
+                    <p style="color: #888; font-size: 0.9rem; margin-bottom: 0;"></p>
+                    <a href="#" class="linkedin-link" target="_blank" style="display: none;">LinkedIn Profile</a>
+                </div>
+
+                <div class="speaker-card" style="text-align: center; position: relative;">
+                    <div class="speaker-image-container" style="position: relative; display: inline-block; margin-bottom: 20px;">
+                        <img src="assets/img/speakers/avinash.jpg" alt="Avinash" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; object-position: center top; box-shadow: 0 4px 20px rgba(0,0,0,0.15); transition: all 0.3s ease;">
+                        <div class="linkedin-overlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0; transition: opacity 0.3s ease; background: rgba(0,123,255,0.9); border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                            <i class="fab fa-linkedin" style="color: white; font-size: 24px;"></i>
+                        </div>
+                    </div>
+                    <h4 style="margin-bottom: 8px; color: #232f3e; font-size: 1.3rem;">Avinash Shashikant Dalvi</h4>
+                    <p style="color: #666; font-size: 1rem; margin-bottom: 0;">Senior Staff Engineer</p>
+                    <p style="color: #888; font-size: 0.9rem; margin-bottom: 0;">Nushift Technologies</p>
+                    <a href="#" class="linkedin-link" target="_blank" style="display: none;">LinkedIn Profile</a>
+                </div>
+
+                <div class="speaker-card" style="text-align: center; position: relative;">
+                    <div class="speaker-image-container" style="position: relative; display: inline-block; margin-bottom: 20px;">
+                        <img src="assets/img/speakers/Cladius Fernando.jpeg" alt="Cladius Fernando" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; object-position: center top; box-shadow: 0 4px 20px rgba(0,0,0,0.15); transition: all 0.3s ease;">
+                        <div class="linkedin-overlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0; transition: opacity 0.3s ease; background: rgba(0,123,255,0.9); border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                            <i class="fab fa-linkedin" style="color: white; font-size: 24px;"></i>
+                        </div>
+                    </div>
+                    <h4 style="margin-bottom: 8px; color: #232f3e; font-size: 1.3rem;">Cladius Fernando</h4>
+                    <p style="color: #666; font-size: 1rem; margin-bottom: 0;">Principal GenAI Architect</p>
+                    <p style="color: #888; font-size: 0.9rem; margin-bottom: 0;">Persistent Systems</p>
+                    <a href="#" class="linkedin-link" target="_blank" style="display: none;">LinkedIn Profile</a>
+                </div>
+
+                <div class="speaker-card" style="text-align: center; position: relative;">
+                    <div class="speaker-image-container" style="position: relative; display: inline-block; margin-bottom: 20px;">
+                         <img src="assets/img/speakers/jatin.jpg" alt="jatin" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; object-position: center top; box-shadow: 0 4px 20px rgba(0,0,0,0.15); transition: all 0.3s ease;">
+                        <div class="linkedin-overlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0; transition: opacity 0.3s ease; background: rgba(0,123,255,0.9); border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                            <i class="fab fa-linkedin" style="color: white; font-size: 24px;"></i>
+                        </div>
+                    </div>
+                    <h4 style="margin-bottom: 8px; color: #232f3e; font-size: 1.3rem;">JATIN GOEL</h4>
+                    <p style="color: #666; font-size: 1rem; margin-bottom: 0;">Cloud Architect & DevOps Engineer</p>
+                    <p style="color: #888; font-size: 0.9rem; margin-bottom: 0;">CloudWizard Consulting Pvt Ltd</p>
+                    <a href="#" class="linkedin-link" target="_blank" style="display: none;">LinkedIn Profile</a>
+                </div>
+
+                <div class="speaker-card" style="text-align: center; position: relative;">
+                    <div class="speaker-image-container" style="position: relative; display: inline-block; margin-bottom: 20px;">
+                        <img src="assets/img/speakers/Jyoti Notani.jpeg" alt="Jyoti Notani" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; object-position: center top; box-shadow: 0 4px 20px rgba(0,0,0,0.15); transition: all 0.3s ease;">
+                        <div class="linkedin-overlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0; transition: opacity 0.3s ease; background: rgba(0,123,255,0.9); border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                            <i class="fab fa-linkedin" style="color: white; font-size: 24px;"></i>
+                        </div>
+                    </div>
+                    <h4 style="margin-bottom: 8px; color: #232f3e; font-size: 1.3rem;">Jyoti Notani</h4>
+                    <p style="color: #666; font-size: 1rem; margin-bottom: 0;">Project Lead</p>
+                    <p style="color: #888; font-size: 0.9rem; margin-bottom: 0;">Persistent Systems</p>
+                    <a href="#" class="linkedin-link" target="_blank" style="display: none;">LinkedIn Profile</a>
+                </div>
+
+                <div class="speaker-card" style="text-align: center; position: relative;">
+                    <div class="speaker-image-container" style="position: relative; display: inline-block; margin-bottom: 20px;">
+                        <img src="assets/img/speakers/naresh waswani.jpg" alt="Naresh Waswani" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; object-position: center top; box-shadow: 0 4px 20px rgba(0,0,0,0.15); transition: all 0.3s ease;">
+                        <div class="linkedin-overlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0; transition: opacity 0.3s ease; background: rgba(0,123,255,0.9); border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                            <i class="fab fa-linkedin" style="color: white; font-size: 24px;"></i>
+                        </div>
+                    </div>
+                    <h4 style="margin-bottom: 8px; color: #232f3e; font-size: 1.3rem;">Naresh Waswani </h4>
+                    <p style="color: #666; font-size: 1rem; margin-bottom: 0;">Senior Architect</p>
+                    <p style="color: #888; font-size: 0.9rem; margin-bottom: 0;">Simpplr Inc</p>
+                    <a href="#" class="linkedin-link" target="_blank" style="display: none;">LinkedIn Profile</a>
+                </div>
+
+                <div class="speaker-card" style="text-align: center; position: relative;">
+                    <div class="speaker-image-container" style="position: relative; display: inline-block; margin-bottom: 20px;">
+                        <img src="assets/img/speakers/Nirmal Pathak.jpg" alt="Nirmal Pathak" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; object-position: center top; box-shadow: 0 4px 20px rgba(0,0,0,0.15); transition: all 0.3s ease;">
+                        <div class="linkedin-overlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0; transition: opacity 0.3s ease; background: rgba(0,123,255,0.9); border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                            <i class="fab fa-linkedin" style="color: white; font-size: 24px;"></i>
+                        </div>
+                    </div>
+                    <h4 style="margin-bottom: 8px; color: #232f3e; font-size: 1.3rem;">Nirmal Pathak</h4>
+                    <p style="color: #666; font-size: 1rem; margin-bottom: 0;">Cloud Infrastructure Architect</p>
+                    <p style="color: #888; font-size: 0.9rem; margin-bottom: 0;">SonicJobs</p>
+                    <a href="#" class="linkedin-link" target="_blank" style="display: none;">LinkedIn Profile</a>
+                </div>
+
+                <div class="speaker-card" style="text-align: center; position: relative;">
+                    <div class="speaker-image-container" style="position: relative; display: inline-block; margin-bottom: 20px;">
+                        <img src="assets/img/speakers/nishanky gyanchandani.jpg" alt="Nishanky Gyanchandani" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; object-position: center top; box-shadow: 0 4px 20px rgba(0,0,0,0.15); transition: all 0.3s ease;">
+                        <div class="linkedin-overlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0; transition: opacity 0.3s ease; background: rgba(0,123,255,0.9); border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                            <i class="fab fa-linkedin" style="color: white; font-size: 24px;"></i>
+                        </div>
+                    </div>
+                    <h4 style="margin-bottom: 8px; color: #232f3e; font-size: 1.3rem;">Nishanky Gyanchandani</h4>
+                    <p style="color: #666; font-size: 1rem; margin-bottom: 0;">Senior Gen AI Engineer</p>
+                    <p style="color: #888; font-size: 0.9rem; margin-bottom: 0;">Persistent Systems Ltd</p>
+                    <a href="#" class="linkedin-link" target="_blank" style="display: none;">LinkedIn Profile</a>
+                </div>
+
+                <div class="speaker-card" style="text-align: center; position: relative;">
+                    <div class="speaker-image-container" style="position: relative; display: inline-block; margin-bottom: 20px;">
+                        <img src="assets/img/speakers/Rahul shivalkar.HEIC" alt="Rahul" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; object-position: center top; box-shadow: 0 4px 20px rgba(0,0,0,0.15); transition: all 0.3s ease;">
+                        <div class="linkedin-overlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0; transition: opacity 0.3s ease; background: rgba(0,123,255,0.9); border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                            <i class="fab fa-linkedin" style="color: white; font-size: 24px;"></i>
+                        </div>
+                    </div>
+                    <h4 style="margin-bottom: 8px; color: #232f3e; font-size: 1.3rem;">Rahul Shivalkar</h4>
+                    <p style="color: #666; font-size: 1rem; margin-bottom: 0;">Lead DevOps Engineer</p>
+                    <p style="color: #888; font-size: 0.9rem; margin-bottom: 0;">EPAM Systems</p>
+                    <a href="#" class="linkedin-link" target="_blank" style="display: none;">LinkedIn Profile</a>
+                </div>
+
+                 <div class="speaker-card" style="text-align: center; position: relative;">
+                    <div class="speaker-image-container" style="position: relative; display: inline-block; margin-bottom: 20px;">
+                        <img src="assets/img/speakers/sakshi nasha.jpg" alt="Sakshi Nasha" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; object-position: center top; box-shadow: 0 4px 20px rgba(0,0,0,0.15); transition: all 0.3s ease;">
+                        <div class="linkedin-overlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0; transition: opacity 0.3s ease; background: rgba(0,123,255,0.9); border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                            <i class="fab fa-linkedin" style="color: white; font-size: 24px;"></i>
+                        </div>
+                    </div>
+                    <h4 style="margin-bottom: 8px; color: #232f3e; font-size: 1.3rem;">Sakshi Nasha</h4>
+                    <p style="color: #666; font-size: 1rem; margin-bottom: 0;">Software Engineer</p>
+                    <p style="color: #888; font-size: 0.9rem; margin-bottom: 0;">Cohesity</p>
+                    <a href="#" class="linkedin-link" target="_blank" style="display: none;">LinkedIn Profile</a>
+                </div>
+
+                 <div class="speaker-card" style="text-align: center; position: relative;">
+                    <div class="speaker-image-container" style="position: relative; display: inline-block; margin-bottom: 20px;">
+                        <img src="assets/img/speakers/sandip das.jpeg" alt="Sandip Das" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; object-position: center top; box-shadow: 0 4px 20px rgba(0,0,0,0.15); transition: all 0.3s ease;">
+                        <div class="linkedin-overlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0; transition: opacity 0.3s ease; background: rgba(0,123,255,0.9); border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                            <i class="fab fa-linkedin" style="color: white; font-size: 24px;"></i>
+                        </div>
+                    </div>
+                    <h4 style="margin-bottom: 8px; color: #232f3e; font-size: 1.3rem;">Sandip Das</h4>
+                    <p style="color: #666; font-size: 1rem; margin-bottom: 0;">Head of DevOps</p>
+                    <p style="color: #888; font-size: 0.9rem; margin-bottom: 0;">Gryphon Online Safety Inc</p>
+                    <a href="#" class="linkedin-link" target="_blank" style="display: none;">LinkedIn Profile</a>
+                </div>
+
+                 <div class="speaker-card" style="text-align: center; position: relative;">
+                    <div class="speaker-image-container" style="position: relative; display: inline-block; margin-bottom: 20px;">
+                         <img src="assets/img/speakers/Sneha Racha.jpg" alt="Sneha Racha" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; object-position: center top; box-shadow: 0 4px 20px rgba(0,0,0,0.15); transition: all 0.3s ease;">
+                        <div class="linkedin-overlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0; transition: opacity 0.3s ease; background: rgba(0,123,255,0.9); border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                            <i class="fab fa-linkedin" style="color: white; font-size: 24px;"></i>
+                        </div>
+                    </div>
+                    <h4 style="margin-bottom: 8px; color: #232f3e; font-size: 1.3rem;">Sneha Racha</h4>
+                    <p style="color: #666; font-size: 1rem; margin-bottom: 0;">AWS DevOps Engineer</p>
+                    <p style="color: #888; font-size: 0.9rem; margin-bottom: 0;">Freelance</p>
+                    <a href="#" class="linkedin-link" target="_blank" style="display: none;">LinkedIn Profile</a>
+                </div>
+
+                 <div class="speaker-card" style="text-align: center; position: relative;">
+                    <div class="speaker-image-container" style="position: relative; display: inline-block; margin-bottom: 20px;">
+                        <img src="assets/img/speakers/swapnil kulkarni.jpg" alt="Swanil Kulkarni" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; object-position: center top; box-shadow: 0 4px 20px rgba(0,0,0,0.15); transition: all 0.3s ease;">
+                        <div class="linkedin-overlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0; transition: opacity 0.3s ease; background: rgba(0,123,255,0.9); border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                            <i class="fab fa-linkedin" style="color: white; font-size: 24px;"></i>
+                        </div>
+                    </div>
+                    <h4 style="margin-bottom: 8px; color: #232f3e; font-size: 1.3rem;">Swapnil Kulkarni</h4>
+                    <p style="color: #666; font-size: 1rem; margin-bottom: 0;"> Customer Success</p>
+                    <p style="color: #888; font-size: 0.9rem; margin-bottom: 0;">Kloudfuse</p>
+                    <a href="#" class="linkedin-link" target="_blank" style="display: none;">LinkedIn Profile</a>
+                </div>
+
+                 <div class="speaker-card" style="text-align: center; position: relative;">
+                    <div class="speaker-image-container" style="position: relative; display: inline-block; margin-bottom: 20px;">
+                        <img src="assets/img/speakers/Zameer Fouzan .jpeg" alt="Zameer Fouzan" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; object-position: center top; box-shadow: 0 4px 20px rgba(0,0,0,0.15); transition: all 0.3s ease;">
+                        <div class="linkedin-overlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0; transition: opacity 0.3s ease; background: rgba(0,123,255,0.9); border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                            <i class="fab fa-linkedin" style="color: white; font-size: 24px;"></i>
+                        </div>
+                    </div>
+                    <h4 style="margin-bottom: 8px; color: #232f3e; font-size: 1.3rem;">Zameer Fouzan</h4>
+                    <p style="color: #666; font-size: 1rem; margin-bottom: 0;">Lead DevRel Engineer</p>
+                    <p style="color: #888; font-size: 0.9rem; margin-bottom: 0;">New Relic</p>
+                    <a href="#" class="linkedin-link" target="_blank" style="display: none;">LinkedIn Profile</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Example: Embed PDF preview for sponsorship -->
 <section class="sponsorship-section" style="background: #fff; padding: 80px 0; border-top: 1px solid #eee;">
     <div class="container">
@@ -704,13 +1050,13 @@
 <section class="sponsors-section" style="background: #f8f9fa; padding: 80px 0;">
     <div class="container">
         <div class="section-header heading6 text-center" style="margin-bottom: 40px;">
-            <h5 data-aos="fade-left" data-aos-duration="800">Our Sponsors</h5>
+            <h5 data-aos="fade-up" data-aos-duration="700">Our Sponsors</h5>
             <div class="space18"></div>
-            <h2 class="text-anime-style-3">Thank You to Our Sponsors</h2>
+            <h2 class="text-anime-style-3" data-aos="zoom-in" data-aos-duration="800">Thank You to Our Sponsors</h2>
         </div>
         <!-- ClickHouse: Platinum Sponsor (full width, first row) -->
         <div class="row justify-content-center mb-4">
-            <div class="col-12 col-md-8 text-center d-flex align-items-stretch justify-content-center mx-auto">
+            <div class="col-12 col-md-8 text-center d-flex align-items-stretch justify-content-center mx-auto" data-aos="fade-up" data-aos-duration="800">
                 <div class="sponsor-box" style="border: 2px solid #e5e4e2; border-radius: 12px; padding: 32px 16px; background: #f7f7fa; box-shadow: 0 2px 12px rgba(229,228,226,0.10); margin-bottom: 24px; width: 100%;">
                     <div style="margin-bottom: 18px;">
                         <span style="background: linear-gradient(90deg,#e5e4e2,#b3b3b3); color: #232f3e; font-weight: 700; padding: 6px 18px; border-radius: 20px; font-size: 1.1rem;">Platinum Sponsor</span>
@@ -722,21 +1068,29 @@
                 </div>
             </div>
         </div>
-        <!-- Elastic: Gold Sponsor (full width, second row) -->
+        <!-- Gold Sponsors (same box: MX priority + Elastic) -->
         <div class="row justify-content-center">
-            <div class="col-12 col-md-8 text-center d-flex align-items-stretch justify-content-center mx-auto">
+            <div class="col-12 col-md-8 text-center d-flex align-items-stretch justify-content-center mx-auto" data-aos="fade-up" data-aos-duration="900" data-aos-delay="100">
                 <div class="sponsor-box" style="border: 2px solid #FFD700; border-radius: 12px; padding: 32px 16px; background: #fffbea; box-shadow: 0 2px 12px rgba(255,215,0,0.07); margin-bottom: 24px; width: 100%;">
-                    <div style="margin-bottom: 18px;">
-                        <span style="background: #FFD700; color: #232f3e; font-weight: 700; padding: 6px 18px; border-radius: 20px; font-size: 1.1rem;">Gold Sponsor</span>
+                    <div style="margin-bottom: 24px;">
+                        <span style="background: #FFD700; color: #232f3e; font-weight: 700; padding: 6px 18px; border-radius: 20px; font-size: 1.1rem;">Gold Sponsors</span>
                     </div>
-                    <img src="assets/img/sponsors/elastic-logo.png" alt="Gold Sponsor Elastic" style="max-width: 220px; width: 100%; height: auto; margin-bottom: 12px;" />
-                    <div style="margin-top: 10px;">
-                        <a href="https://elastic.co" target="_blank" style="color: #ff9900; font-weight: 600; text-decoration: none;">Visit Elastic</a>
+                    <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 36px; flex-wrap: wrap;">
+                        <div style="display: flex; flex-direction: column; align-items: center;" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="150">
+                            <img src="assets/img/sponsors/elastic-logo.png" alt="Gold Sponsor Elastic" style="max-width: 220px; width: 100%; height: auto; margin-bottom: 6px;" />
+                            <div style="margin-top: 6px;">
+                                <a href="https://elastic.co" target="_blank" style="color: #ff9900; font-weight: 600; text-decoration: none;">Visit Elastic</a>
+                            </div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center;" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="250">
+                            <img src="assets/img/sponsors/mx-black.png" alt="Gold Sponsor MX" style="max-width: 220px; width: 100%; height: auto; margin-bottom: 6px;" />
+                            <div style="margin-top: 4px; color: #555; font-weight: 700;">Digital Partner</div>
+                        </div>
                     </div>
                 </div>
             </div>
-		<!--===== FOOTER AREA STARTS =======-->
-		<!-- Divider between Feedback Section and Footer -->
+        </div>
+        <!--===== FOOTER AREA STARTS =======-->
 
 			<!-- Organizing Team Section -->
 <section class="organizers-section" style="padding: 80px 0; background-color: #fff;">
@@ -1133,41 +1487,33 @@
 <div style="background: #d68204; height: 5px; margin: 0;"></div>
 
 			<!-- Footer Section -->
-<div class="footer1-section-area" style="background-color: #232f3e; color: #fff; padding: 40px 0;">
+<div class="footer1-section-area" style="background-color: #232f3e; color: #fff; padding: 48px 0;">
     <div class="container">
         <div class="row">
             <!-- Footer Column 1 -->
             <div class="col-lg-4 col-md-6">
-                <div class="footer-logo-area" style="margin-bottom: 20px;">
-                    <img src="assets/img/awsugpune.png" alt="AWS User Group Pune" style="max-width: 150px; height: auto; margin-bottom: 20px;" />
-                    <p style="font-size: 0.9rem; line-height: 1.6;">
-                        AWS Community Day Pune is a community-driven event organized by AWS User Group Pune, bringing together cloud enthusiasts, developers, and industry experts.
+                <div class="footer-logo-area" style="margin-bottom: 16px;">
+                    <img class="footer-logo" src="assets/img/awsugpune.png" alt="AWS User Group Pune" />
+                    <p style="font-size: 0.95rem; line-height: 1.8; color: #cfd8e3;">
+                        AWS Community Day Pune is a community-driven event by AWS User Group Pune, bringing together cloud enthusiasts, developers, and industry experts.
                     </p>
                 </div>
-                <ul style="list-style: none; padding: 0; display: flex; gap: 15px; margin-top: 20px;">
-                    <li>
-                        <a href="https://konfhub.com/acdpune25-aiml" target="_blank" title="Get Tickets" style="color: #ff9900; font-size: 1.5rem;"><i class="fa-solid fa-ticket"></i></a>
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com/awspune/" target="_blank" style="color: #ff9900; font-size: 1.5rem;"><i class="fa-brands fa-instagram"></i></a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/company/aws-user-group-pune/" target="_blank" style="color: #ff9900; font-size: 1.5rem;"><i class="fa-brands fa-linkedin-in"></i></a>
-                    </li>
-                    <li>
-                        <a href="mailto:team@awsugpune.org" style="color: #ff9900; font-size: 1.5rem;"><i class="fa-regular fa-envelope"></i></a>
-                    </li>
-                </ul>
+                <div class="social-links" aria-label="Footer social links">
+                    <a href="https://konfhub.com/acdpune2025" target="_blank" title="Get Tickets" aria-label="Get Tickets"><i class="fa-solid fa-ticket"></i></a>
+                    <a href="https://www.instagram.com/awspune/" target="_blank" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/aws-user-group-pune/" target="_blank" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="mailto:team@awsugpune.org" title="Email" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+                </div>
             </div>
 
             <!-- Footer Column 2 -->
             <div class="col-lg-4 col-md-6">
                 <div class="link-content">
-                    <h4 style="font-size: 1.2rem; margin-bottom: 20px; color: #fff;">Quick Links</h4>
-                    <ul style="list-style: none; padding: 0; line-height: 2;">
-                        <li><a href="#event-overview" style="color: #ccc; text-decoration: none;">About Event</a></li>
-                        <li><a href="#event-overview" style="color: #ccc; text-decoration: none;">Schedule</a></li>
-                        <li><a href="mailto:team@awsugpune.org" style="color: #ccc; text-decoration: none;">Contact Us</a></li>
+                    <h4 class="footer-column-title">Quick Links</h4>
+                    <ul style="line-height: 2;">
+                        <li><a href="#event-overview">About Event</a></li>
+                        <li><a href="#event-overview">Schedule</a></li>
+                        <li><a href="mailto:team@awsugpune.org">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
@@ -1175,19 +1521,19 @@
             <!-- Footer Column 3 -->
             <div class="col-lg-4 col-md-6">
                 <div class="link-content">
-                    <h4 style="font-size: 1.2rem; margin-bottom: 20px; color: #fff;">Event Details</h4>
-                    <ul style="list-style: none; padding: 0; line-height: 2;">
-                        <li><a href="#" style="color: #ccc; text-decoration: none;"><i class="fa-regular fa-calendar"></i> August 23rd, 2025</a></li>
-                        <li><a href="#" style="color: #ccc; text-decoration: none;"><i class="fa-regular fa-location-dot"></i> Pune, Maharashtra, India</a></li>
-                        <li><a href="mailto:team@awsugpune.org" style="color: #ccc; text-decoration: none;"><i class="fa-regular fa-envelope"></i> team@awsugpune.org</a></li>
+                    <h4 class="footer-column-title">Event Details</h4>
+                    <ul style="line-height: 2;">
+                        <li><a href="#"><i class="fa-regular fa-calendar"></i> August 23rd, 2025</a></li>
+                        <li><a href="#"><i class="fa-regular fa-location-dot"></i> Pune, Maharashtra, India</a></li>
+                        <li><a href="mailto:team@awsugpune.org"><i class="fa-regular fa-envelope"></i> team@awsugpune.org</a></li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <div class="row" style="margin-top: 40px;">
+        <div class="row footer-bottom">
             <div class="col-lg-12 text-center">
-                <p style="font-size: 0.9rem; color: #ccc;">&copy; 2025 AWS Community Day Pune. All Rights Reserved.</p>
+                <p style="font-size: 0.9rem; color: #ccc; margin: 0;">&copy; 2025 AWS Community Day Pune. All Rights Reserved.</p>
             </div>
         </div>
     </div>
