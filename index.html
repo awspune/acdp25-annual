@@ -78,6 +78,14 @@
         }
         .footer1-section-area .footer-logo { max-width: 160px; height: auto; margin-bottom: 20px; }
         .footer1-section-area .footer-bottom { margin-top: 32px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.12); }
+
+        /* Sponsors layout tweaks for mobile */
+        .tier-logos { gap: 28px; }
+        @media (max-width: 576px) {
+            .tier-logos { gap: 16px; }
+            .tier-logos img { max-width: 160px !important; }
+            .sponsors-section .sponsor-box { padding: 24px 12px !important; min-height: 0; }
+        }
         </style>
 	</head>
 	<body class="homepage4-body">
@@ -1136,22 +1144,22 @@
                     <div style="margin-bottom: 24px;">
                         <span style="background: #FFD700; color: #232f3e; font-weight: 700; padding: 6px 18px; border-radius: 20px; font-size: 1.1rem;">Gold Sponsors</span>
                     </div>
-                    <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 36px; flex-wrap: wrap;">
+                    <div class="tier-logos" style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 36px; flex-wrap: wrap;">
                          <div style="display: flex; flex-direction: column; align-items: center;" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="250">
-                            <img src="assets/img/sponsors/aws.png" alt="Gold Sponsor MX" style="max-width: 220px; width: 100%; height: auto; margin-bottom: 6px;" />
+                            <a href="https://aws.amazon.com" target="_blank" aria-label="AWS">
+                                <img src="assets/img/sponsors/aws.png" alt="Gold Sponsor AWS" style="max-width: 220px; width: 100%; height: auto; margin-bottom: 6px;" />
+                            </a>
                         </div>
                         <div style="display: flex; flex-direction: column; align-items: center;" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="150">
-                            <img src="assets/img/sponsors/elastic-logo.png" alt="Gold Sponsor Elastic" style="max-width: 220px; width: 100%; height: auto; margin-bottom: 6px;" />
-                            <div style="margin-top: 6px;">
-                                <a href="https://elastic.co" target="_blank" style="color: #ff9900; font-weight: 600; text-decoration: none;">Visit Elastic</a>
-                            </div>
+                            <a href="https://elastic.co" target="_blank" aria-label="Elastic">
+                                <img src="assets/img/sponsors/elastic-logo.png" alt="Gold Sponsor Elastic" style="max-width: 220px; width: 100%; height: auto; margin-bottom: 6px;" />
+                            </a>
                         </div>
                         <div style="display: flex; flex-direction: column; align-items: center;" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="250">
-                            <img src="assets/img/sponsors/mx-black.png" alt="Gold Sponsor MX" style="max-width: 220px; width: 100%; height: auto; margin-bottom: 6px;" />
+                            <a href="https://logitech.com/" target="_blank" aria-label="Logitech MX">
+                                <img src="assets/img/sponsors/mx-black.png" alt="Gold Sponsor MX" style="max-width: 220px; width: 100%; height: auto; margin-bottom: 6px;" />
+                            </a>
                             <div style="margin-top: 4px; color: #555; font-weight: 700;">Digital Partner</div>
-							       <div style="margin-top: 6px;">
-                                <a href="https://logitech.com/" target="_blank" style="color: #ff9900; font-weight: 600; text-decoration: none;">Visit Logitech</a>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -1165,10 +1173,12 @@
                     <div style="margin-bottom: 24px;">
                         <span style="background: #CD7F32; color: #ffffff; font-weight: 700; padding: 6px 18px; border-radius: 20px; font-size: 1.1rem;">Bronze Sponsors</span>
                     </div>
-                    <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 36px; flex-wrap: wrap;">
+                    <div class="tier-logos" style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 36px; flex-wrap: wrap;">
                          <div style="display: flex; flex-direction: column; align-items: center;" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="250">
-                            <img src="assets/img/sponsors/sudo.png" alt="Bronze Sponsor Sudo" style="max-width: 220px; width: 100%; height: auto; margin-bottom: 6px;" />
-                        </div>
+                            <a href="https://sudoconsultants.com" target="_blank" aria-label="Sudo Consultants">
+                                <img src="assets/img/sponsors/sudo.png" alt="Bronze Sponsor Sudo" style="max-width: 220px; width: 100%; height: auto; margin-bottom: 6px;" />
+                            </a>
+                         </div>
                     </div>
                 </div>
             </div>
