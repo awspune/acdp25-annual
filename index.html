@@ -145,12 +145,15 @@
                 </div>
                 <div class="col-lg-6">
                     <nav class="main-menu text-center">
-                        <ul style="display: flex; justify-content: center; gap: 32px; margin: 0; padding: 0; list-style: none;">
+                        <ul style="display: flex; justify-content: center; gap: 30px; margin: 0; padding: 0; list-style: none;">
                             <li><a href="index.html" style="font-weight: 600; color: #232f3e;">Home</a></li>
                             <li><a href="#event-overview" style="font-weight: 600; color: #232f3e;">About Event</a></li>
                             <li><a href="#agenda" style="font-weight: 600; color: #232f3e;">Agenda</a></li>
                             <li><a href="#venue" style="font-weight: 600; color: #232f3e;">Venue</a></li>
                             <li><a href="#speakers" style="font-weight: 600; color: #232f3e;">Speakers</a></li>
+                            <li><a href="#sponsors" style="font-weight: 600; color: #232f3e;">Sponsor</a></li>
+                           <!-- <li><a href="#blogs" style="font-weight: 600; color: #232f3e;">Blogs</a></li> -->
+
 
                         </ul>
                     </nav>
@@ -1183,7 +1186,7 @@
 </section>
 
 <!-- Add this after the sponsorship deck section, before the next divider -->
-<section class="sponsors-section" style="background: #f8f9fa; padding: 80px 0;">
+<section class="sponsors-section" id="sponsors" style="background: #f8f9fa; padding: 80px 0;">
     <div class="container">
         <div class="section-header heading6 text-center" style="margin-bottom: 40px;">
             <h5 data-aos="fade-up" data-aos-duration="700">Our Sponsors</h5>
@@ -1193,14 +1196,13 @@
         <!-- ClickHouse: Platinum Sponsor (full width, first row) -->
         <div class="row justify-content-center mb-4">
             <div class="col-12 col-md-8 text-center d-flex align-items-stretch justify-content-center mx-auto" data-aos="fade-up" data-aos-duration="800">
-                <div class="sponsor-box" style="border: 2px solid #e5e4e2; border-radius: 12px; padding: 32px 16px; background: #f7f7fa; box-shadow: 0 2px 12px rgba(229,228,226,0.10); margin-bottom: 24px; width: 100%;">
+                <div class="sponsor-box" style="border: 2px solid #e5e4e2; gap: 36px; border-radius: 12px; padding: 32px 16px; background: #f7f7fa; box-shadow: 0 2px 12px rgba(229,228,226,0.10); margin-bottom: 24px; width: 100%;">
                     <div style="margin-bottom: 18px;">
                         <span style="background: linear-gradient(90deg,#e5e4e2,#b3b3b3); color: #232f3e; font-weight: 700; padding: 6px 18px; border-radius: 20px; font-size: 1.1rem;">Platinum Sponsor</span>
                     </div>
-                    <img src="assets/img/sponsors/clickhouse.png" alt="Platinum Sponsor ClickHouse" style="max-width: 220px; width: 100%; height: auto; margin-bottom: 12px;" />
-                    <div style="margin-top: 10px;">
-                        <a href="https://clickhouse.com" target="_blank" style="color: #ff9900; font-weight: 600; text-decoration: none;">Visit ClickHouse</a>
-                    </div>
+                    <a href="https://clickhouse.com" target="_blank" aria-label="Elastic">
+                                <img src="assets/img/sponsors/PHOTO-2025-08-21-10-26-43.png" alt="Platinum Sponsor" style="max-width: 220px; width: 100%; height: auto; margin-bottom: 6px;" />
+                            </a>
                 </div>
             </div>
         </div>
@@ -1250,6 +1252,9 @@
                 </div>
             </div>
         </div>
+
+
+        
         <!--===== FOOTER AREA STARTS =======-->
 
             <!-- Organizing Team Section -->
