@@ -25,6 +25,27 @@
         <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
         <!-- Place this style block in your <head> section, after your CSS links -->
         <style>
+        /* Dropdown menu styles */
+        .dropdown-menu {
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border: 1px solid rgba(0,0,0,0.08);
+            padding: 8px 0;
+        }
+        .dropdown-item {
+            padding: 8px 24px;
+            color: #232f3e;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        .dropdown-item:hover {
+            background-color: #f8f9fa;
+            color: #ff9900;
+        }
+        .dropdown-toggle::after {
+            margin-left: 6px;
+            vertical-align: middle;
+        }
         /* Use the same font as the navbar for all text */
         /* Sponsors hover/animation helpers */
         .sponsors-section .sponsor-box {
@@ -151,7 +172,19 @@
                             <li><a href="#agenda" style="font-weight: 600; color: #232f3e;">Agenda</a></li>
                             <li><a href="#venue" style="font-weight: 600; color: #232f3e;">Venue</a></li>
                             <li><a href="#speakers" style="font-weight: 600; color: #232f3e;">Speakers</a></li>
-                            <li><a href="#sponsors" style="font-weight: 600; color: #232f3e;">Sponsors</a></li>
+                            <li class="dropdown">
+                                <a href="#sponsors" class="dropdown-toggle" data-bs-toggle="dropdown" style="font-weight: 600; color: #232f3e;">
+                                    Sponsors
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#sponsors">All Sponsors</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="sponsors/clickhouse.html">ClickHouse</a></li>
+                                    <li><a class="dropdown-item" href="sponsors/elastic.html">Elastic</a></li>
+                                    <li><a class="dropdown-item" href="sponsors/logitech.html">Logitech</a></li>
+                                    <li><a class="dropdown-item" href="sponsors/sudo.html">SUDO Consultants</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </nav>
                 </div>
@@ -1198,8 +1231,8 @@
                 <span style="background: linear-gradient(90deg,#e5e4e2,#b3b3b3); color: #232f3e; font-weight: 700; padding: 6px 18px; border-radius: 20px; font-size: 1.1rem;">Platinum Sponsor</span>
             </div>
             <div style="height: 20px;"></div>
-            <a href="https://clickhouse.com" target="_blank" aria-label="Logitech MX">
-                <img src="assets/img/sponsors/ClickHouse1.png" alt="Gold Sponsor MX" style="max-width: 220px; width: 100%; height: auto;" />
+            <a href="sponsors/clickhouse.html" aria-label="ClickHouse">
+                <img src="assets/img/sponsors/ClickHouse1.png" alt="Platinum Sponsor ClickHouse" style="max-width: 220px; width: 100%; height: auto;" />
             </a>
             <div style="height: 20px;"></div>
         </div>
@@ -1221,12 +1254,12 @@
                             </a>
                         </div>
                         <div style="display: flex; flex-direction: column; align-items: center;" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="150">
-                            <a href="https://elastic.co" target="_blank" aria-label="Elastic">
+                            <a href="sponsors/elastic.html" aria-label="Elastic">
                                 <img src="assets/img/sponsors/elastic-logo.png" alt="Gold Sponsor Elastic" style="max-width: 220px; width: 100%; height: auto; margin-bottom: 6px;" />
                             </a>
                         </div>
                         <div style="display: flex; flex-direction: column; align-items: center;" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="250">
-                            <a href="https://logitech.com/" target="_blank" aria-label="Logitech MX">
+                            <a href="sponsors/logitech.html" aria-label="Logitech MX">
                                 <img src="assets/img/sponsors/mx-black.png" alt="Gold Sponsor MX" style="max-width: 220px; width: 100%; height: auto; margin-bottom: 6px;" />
                             </a>
                             <div style="margin-top: 4px; color: #555; font-weight: 700;">Digital Partner</div>
@@ -1245,7 +1278,7 @@
                     </div>
                     <div class="tier-logos" style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 36px; flex-wrap: wrap;">
                          <div style="display: flex; flex-direction: column; align-items: center;" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="250">
-                            <a href="https://sudoconsultants.com" target="_blank" aria-label="Sudo Consultants">
+                            <a href="sponsors/sudo.html" aria-label="Sudo Consultants">
                                 <img src="assets/img/sponsors/sudo.png" alt="Bronze Sponsor Sudo" style="max-width: 220px; width: 100%; height: auto; margin-bottom: 6px;" />
                             </a>
                          </div>
